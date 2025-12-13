@@ -1,47 +1,90 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    <title>Zed Gaming</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZED Gaming Café</title>
 
-    <link rel = "stylesheet" id = "main-style-css" href="assets/css/style.css" media = 'all'/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body style = "background-color:  #130233;">
+<header class="glass">
+  <nav class="nav">
+    <img src="ZG-Logo-Transparent.png" class="logo" alt="ZED Gaming">
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#zones">Zones</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <div class="burger">☰</div>
+  </nav>
+</header>
 
-    <header class="header__container">
-        <div class="header__union">
-            <div class = "header__menu__container">
-                <ul id = "left-header-menu" class = "header__navigator__left" style="translate: none;
-                rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">
-                    <li id = "menu-home-option">
-                        <a href = "file:///C:/Users/PC/Desktop/WebDev/Tech%20Website/index.html" style="color: rgb(240 239 244);">
-                            HOME
-                        </a>
-                    </li>
-                    <li id = "menu-rates-option">
-                        <a href="file:///C:/Users/PC/Desktop/WebDev/Tech%20Website/index.html" style="color: rgb(240 239 244);">
-                            RATES
-                        </a>
-                    </li>
+<section class="hero">
+  <div class="hero-inner reveal">
+    <img src="ZG-Vertical-Logo-Transparent.png" class="hero-logo" />
+    <h1>Level Up Your Reality</h1>
+    <p>More than a center. A universe for gamers.</p>
+    <button class="cta-btn">Squad Up & Play</button>
+  </div>
+  <canvas id="particles"></canvas>
+</section>
 
-                </ul>
-                <ul id = "right-header-menu" class = "header__navigator__right" style="color: rgb(240 239 244);">
-                    <li id = "menu-locations-option">
-                        <a href = " " style="color: rgb(240 239 244);">
-                            LOCATIONS
-                        </a>
-                    </li>
+<section id="experience" class="section">
+  <h2 class="section-title reveal">Built for Immersion</h2>
+  <p class="section-sub reveal">From RGB battle stations to plush lounges — comfort meets competition.</p>
 
-                </ul>
-            </div>
-            <div class="header__logo">
-                <a href="index.html">
-                    <img class = "header__logo__img" src="src/pics/ZG-Vertical.png"  alt="Zed Gaming">
-                </a>
-            </div>
-        </div>
-    </header>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Elite PCs</h3>
+      <p>Zero-lag fiber, ultra-performance rigs, competitive-ready.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Cozy Lounges</h3>
+      <p>Soft seating, warm lighting, squad-first energy.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Female-Only Floor</h3>
+      <p>Inclusive, safe, and empowering gaming space.</p>
+    </div>
+  </div>
+</section>
+
+<section id="zones" class="section alt">
+  <h2 class="section-title reveal">Always On. Always Ready.</h2>
+  <div class="zones">
+    <div class="zone reveal">🎮 Esports Arena</div>
+    <div class="zone reveal">🕶 VR / AR Zone</div>
+    <div class="zone reveal">🕹 Retro Arcade</div>
+    <div class="zone reveal">💻 Private Squad Rooms</div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2 class="section-title reveal">The Vibe</h2>
+  <div class="gallery">
+    <div class="shot"></div>
+    <div class="shot"></div>
+    <div class="shot"></div>
+  </div>
+</section>
+
+<section id="visit" class="section cta reveal">
+  <h2>Your Squad’s New HQ</h2>
+  <p>24/7 Gaming Café • Abu Dhabi</p>
+  <button class="cta-btn">Visit ZED</button>
+</section>
+
+<footer>
+  <p>© 2025 ZED Gaming Café — Where Abu Dhabi Games</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
