@@ -212,6 +212,7 @@ body{
   border-radius:20px;
   background:linear-gradient(135deg,var(--p2),var(--p3));
   filter:brightness(.8);
+  box-shadow:0 0 30px rgba(135,82,250,.4);
   transition:.4s;
 }
 
