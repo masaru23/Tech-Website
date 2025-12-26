@@ -20,11 +20,56 @@ window.addEventListener('scroll', revealOnLoadAndScroll);
 
 
 // Mobile menu
-const burger=document.querySelector('.burger');
-const navLinks=document.querySelector('.nav-links');
-burger.addEventListener('click',()=>{
-  navLinks.style.display=navLinks.style.display==='flex'?'none':'flex';
+// Mobile menu with outside click + back button close
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.nav-overlay');
+
+function openMenu() {
+  navLinks.classList.add('active');
+  overlay.classList.add('active');
+  history.pushState({ menu: true }, "");
+}
+
+function closeMenu() {
+  navLinks.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+// Toggle on burger click
+burger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (navLinks.classList.contains('active')) {
+    closeMenu();
+    history.back(); // remove pushed state
+  } else {
+    openMenu();
+  }
 });
+
+// Close when clicking outside
+document.addEventListener('click', (e) => {
+  if (
+    navLinks.classList.contains('active') &&
+    !navLinks.contains(e.target) &&
+    !burger.contains(e.target)
+  ) {
+    closeMenu();
+    history.back();
+  }
+});
+
+// Close on back button
+window.addEventListener('popstate', () => {
+  closeMenu();
+});
+
+// Allow overlay click to close menu
+overlay.addEventListener('click', () => {
+  closeMenu();
+  history.back();
+});
+
 
 // Particle background
 const canvas=document.getElementById('particles');
